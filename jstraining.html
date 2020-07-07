@@ -1,0 +1,48 @@
+<head>
+  <title>js training</title>
+  <style>
+    .right{
+      position: absolute;
+      height: 100%;
+      width: 25%;
+      top: 0px;
+      left: 75%;
+    }
+  </style>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      $("#documentation").hide();
+      
+      $("#activate").click(function(){
+        $("#documentation").toggle();
+      });
+      
+      //input bookmarklet emulator
+      $("#input").click(function(){
+        var lolxd = document.createElement('script');
+        lolxd.innerHTML = prompt('js to inject here');
+        document.body.appendChild(lolxd);
+      });
+    });
+  </script>
+</head>
+<body>
+  <iframe class="right" src="https://valarpirai.github.io/video-chat-app/"></iframe>
+  
+  <p id="">this page has been jquerified</p>
+  <button id="useless">I am useless!</button>
+  <iframe></iframe>
+  <br>
+  <button id="input">click me to inject code</button>
+  <br>
+  <button id="activate">display the documentation</button>
+  <div id="documentation">
+    <p>documentation is the best way to fix and issue, or learn something new!</p>
+    <a href="https://www.w3schools.com/js">w3schools, one of the best documentations out there!</a>
+    <p>if it isn't there, just google your issue and find something on stackoverflow</p>
+  </div>
+</body>
